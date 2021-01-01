@@ -9,7 +9,7 @@ import { RulesDialogComponent } from "../rules-dialog/rules-dialog.component";
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-
+  score: number = 0;
   constructor(
     public dialog: MatDialog
   ) { }

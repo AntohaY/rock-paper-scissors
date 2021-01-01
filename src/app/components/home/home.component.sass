@@ -16,6 +16,7 @@ $desktop: 1024px
     padding: 10px
     width: 60%
     font-weight: bold
+    top: 15%
     @media (max-width: $phone)
       width: 90%
       padding: unset
@@ -47,9 +48,52 @@ $desktop: 1024px
         font-size: 70px
         font-weight: bold
 
+  .content-container
+    top: 50%
+    margin-top: 85pt
+
+    .border-gradient
+      //border: 20px solid
+
+
+    .icon-container
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .circle
+      width: 125px
+      height: 125px
+      border-radius: 50%
+      border-image-slice: 1
+      border: 30px solid
+      background-color: white
+
+      @media (max-width: $phone)
+        width: 100px
+        height: 100px
+
+    .paper
+      left: 10%
+      border: 30px solid hsl(230, 89%, 62%)
+      box-shadow: 0px 10px 0px 1px hsl(240, 89%, 62%)
+
+    .scissors
+      left: 90%
+      border: 30px solid hsl(39, 89%, 49%)
+      box-shadow: 0px 10px 0px 1px hsl(36, 89%, 62%)
+
+
+    .rock
+      top: 75%
+      border: 30px solid hsl(349, 71%, 52%)
+      box-shadow: 0px 10px 0px 1px hsl(353, 89%, 62%)
+
+
+
+
   .centered
     position: fixed
-    top: 15%
     left: 50%
     transform: translate(-50%, -50%)
 

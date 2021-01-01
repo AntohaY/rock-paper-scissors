@@ -1,14 +1,24 @@
 <div class="content-container">
   <div class="scoreboard-header centered">
     <div class="title">
-      <p>ROCK</p>
-      <p>PAPER</p>
-      <p>SCISSORS</p>
+      <img src="../../../assets/images/logo.svg" alt="">
     </div>
     <div class="score">
       <p>SCORE</p>
-      <p class="score-number">12</p>
+      <p class="score-number">{{ score }}</p>
     </div>
+  </div>
+  <div class="content-container centered">
+    <div class="circle paper icon-container centered border-gradient">
+      <img src="../../../assets/images/icon-paper.svg" alt="">
+    </div>
+    <div class="circle scissors icon-container centered border-gradient">
+      <img src="../../../assets/images/icon-scissors.svg" alt="">
+    </div>
+    <div class="circle rock icon-container centered border-gradient">
+      <img src="../../../assets/images/icon-rock.svg" alt="">
+    </div>
+      <img src="../../../assets/images/bg-triangle.svg" alt="">
   </div>
   <div class="footer rules" (click)="openRulesDialog()">
     RULES
