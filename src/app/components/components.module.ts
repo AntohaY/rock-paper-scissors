@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { RulesDialogComponent } from "./rules-dialog/rules-dialog.component";
 import {MatDialogModule} from "@angular/material/dialog";
+import { GameComponent } from './game/game.component';
 
 @NgModule({
-  declarations: [HomeComponent, RulesDialogComponent],
+  declarations: [HomeComponent, RulesDialogComponent, GameComponent],
   imports: [
     CommonModule,
     MatDialogModule
@@ -14,7 +15,8 @@ import {MatDialogModule} from "@angular/material/dialog";
   exports: [
     HomeComponent,
     RulesDialogComponent,
-    MatDialogModule
+    MatDialogModule,
+    GameComponent
   ],
   bootstrap: [HomeComponent, RulesDialogComponent]
 })

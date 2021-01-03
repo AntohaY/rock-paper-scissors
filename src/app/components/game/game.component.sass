@@ -1,0 +1,154 @@
+@import '~src/assets/variables'
+
+.content-container
+  top: 60%
+  @media (max-device-width: $phone)
+    top: 50%
+
+  .triangle
+    @media (max-width: $phone)
+      width: 250px
+      height: 250px
+
+  .icon-container
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .circle
+    width: 125px
+    height: 125px
+    border-radius: 50%
+    border-image-slice: 1
+    border: 10px solid
+    background-color: white
+
+    @media (max-width: $phone)
+      width: 100px
+      height: 100px
+
+  .paper
+    border: 15px solid hsl(230, 89%, 62%)
+    box-shadow: 0px 5px 0px 1px hsl(240, 89%, 62%)
+
+  .paper.triangle
+    left: 10%
+
+  .scissors
+    border: 15px solid hsl(39, 89%, 49%)
+    box-shadow: 0px 5px 0px 1px hsl(36, 89%, 62%)
+
+  .scissors.triangle
+    left: 90%
+
+  .rock
+    border: 15px solid hsl(349, 71%, 52%)
+    box-shadow: 0px 5px 0px 1px hsl(353, 89%, 62%)
+
+  .rock.triangle
+    top: 75%
+
+  .player-selection
+    left: 25%
+
+  .house-selection
+    left: 75%
+
+.game-result
+  //display: flex
+  //justify-content: space-evenly
+  //align-items: center
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: 1fr
+  justify-items: safe center
+  width: 80%
+  margin-top: 40px
+  @media (max-width: $phone)
+    display: inline-table
+    text-align: center
+    width: 100%
+    top: 40%
+
+  .picks
+    display: inline-block
+    padding: 20px
+
+  .pick-text
+    text-align: center
+    margin-bottom: 20px
+    color: white
+    font-weight: bolder
+    font-size: 30px
+    @media (max-width: $phone)
+      font-size: 20px
+
+  .game-result-container
+    padding: 10px
+    align-self: center
+    grid-row-start: 1
+    grid-column-start: 2
+    @media (max-width: $phone)
+      margin-top: 50px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+  .game-result-text
+    margin-bottom: 30px
+    font-size: 60px
+    font-weight: bolder
+    color: white
+    text-align: center
+
+  .circle
+    height: 200px
+    width: 200px
+    img
+      height: 100px
+    @media (max-width: $phone)
+      height: 100px
+      width: 100px
+      img
+        height: 50px
+
+  .play-again-button
+    width: 250px
+    height: 60px
+    color: $score-text
+    text-align: center
+    background-color: white
+    letter-spacing: 2px
+    font-size: 16px
+    border-radius: 12px
+    display: flex
+    justify-content: center
+    align-content: center
+    flex-direction: column
+    font-weight: bold
+    &:hover
+      color: red
+
+  .pulse
+    border-radius: 50%
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.85)
+    animation: pulse 2s infinite
+
+  @-webkit-keyframes pulse
+    0%
+      -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0.85)
+    70%
+      -webkit-box-shadow: 0 0 0 100px rgba(204,169,44, 0)
+    100%
+      -webkit-box-shadow: 0 0 0 200px rgba(204,169,44, 0)
+
+  @keyframes pulse
+    0%
+      -moz-box-shadow: 0 0 0 rgba(255, 255, 255, 0.85)
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0.85)
+    70%
+      -moz-box-shadow: 0 0 0 100px rgba(204,169,44, 0)
+      box-shadow: 0 0 0 100px rgba(204,169,44, 0)
+    100%
+      -moz-box-shadow: 0 0 0 200px rgba(204,169,44, 0)
+      box-shadow: 0 0 0 200px rgba(204,169,44, 0)

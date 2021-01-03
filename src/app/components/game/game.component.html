@@ -1,0 +1,37 @@
+<div class="content-container centered" *ngIf="!showGameResult">
+  <div class="circle paper triangle icon-container centered" >
+    <img src="../../../assets/images/icon-paper.svg" (click)="selectElement('Paper')">
+  </div>
+  <div class="circle scissors triangle icon-container centered" >
+    <img src="../../../assets/images/icon-scissors.svg" (click)="selectElement('Scissors')">
+  </div>
+  <div class="circle rock triangle icon-container centered" >
+    <img src="../../../assets/images/icon-rock.svg" (click)="selectElement('Rock')">
+  </div>
+  <img class="triangle" src="../../../assets/images/bg-triangle.svg" alt="">
+</div>
+<div class="content-container game-result centered" *ngIf="showGameResult">
+  <div class="player-pick picks">
+    <div class="pick-text">YOU PICKED</div>
+    <div class="circle {{playerSelection.toLowerCase()}} icon-container player-selection"
+         [ngClass]="{'pulse': gameResult && gameResultString !== 'IT IS A TIE!'}">
+      <img src="../../../assets/images/icon-{{playerSelection.toLowerCase()}}.svg" alt="">
+    </div>
+  </div>
+  <div class="house-pick picks">
+    <div class="pick-text">HOUSE PICKED</div>
+    <div class="circle {{houseSelection.toLowerCase()}} icon-container house-selection"
+         [ngClass]="{'pulse': gameResult === false && gameResultString !== 'IT IS A TIE!'}">
+      <img src="../../../assets/images/icon-{{houseSelection.toLowerCase()}}.svg" alt="">
+    </div>
+  </div>
+  <div class="game-result-container">
+    <div class="game-result-text">
+      {{ gameResultString }}
+    </div>
+    <div class="play-again-button" (click)="playAgain()">
+      PLAY AGAIN
+    </div>
+  </div>
+</div>
+

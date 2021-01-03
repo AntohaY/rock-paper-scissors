@@ -8,18 +8,7 @@
       <p class="score-number">{{ score }}</p>
     </div>
   </div>
-  <div class="content-container centered">
-    <div class="circle paper icon-container centered border-gradient">
-      <img src="../../../assets/images/icon-paper.svg" alt="">
-    </div>
-    <div class="circle scissors icon-container centered border-gradient">
-      <img src="../../../assets/images/icon-scissors.svg" alt="">
-    </div>
-    <div class="circle rock icon-container centered border-gradient">
-      <img src="../../../assets/images/icon-rock.svg" alt="">
-    </div>
-      <img src="../../../assets/images/bg-triangle.svg" alt="">
-  </div>
+  <app-game (changeScore)="changeScore($event)"></app-game>
   <div class="footer rules" (click)="openRulesDialog()">
     RULES
   </div>

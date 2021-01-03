@@ -20,4 +20,9 @@ export class HomeComponent implements OnInit {
   openRulesDialog() {
     this.dialog.open(RulesDialogComponent);
   }
+
+  changeScore(data: any) {
+    if (data?.victory) this.score ++;
+    else if (!data?.victory && this.score !== 0) this.score --;
+  }
 }
